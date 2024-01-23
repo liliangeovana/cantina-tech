@@ -9,11 +9,10 @@
 <body>
 
     <!--TELA CENTRAL-->
-    <div class="bg-slate-100 h-svh flex justify-center items-center">
-
-
+    <div class="bg-slate-100 h-svh flex flex-col justify-center items-center">
+ 
         <!--TELA LOGIN-->
-        <div id="loginScreen" class="bg-white bg-opacity-55 w-80 mx-auto m-auto rounded-md shadow-xl">
+        <div id="loginScreen" class="bg-white bg-opacity-55 w-80 mx-auto rounded-md shadow-xl">
             
             <!--IMAGEM-->
             <section id="formHead" class="text-center font-serif bg-green-800 p-4 rounded-t-xl">
@@ -21,20 +20,24 @@
 
                 <span class="text-lg uppercase font-medium text-white">Bem-vindo(a)!</span>
             </section>
+       
         
             <!--FORMULÁRIO LOGIN-->
-            <section id="formBody" class="text-center font-serif rounded-b-lg border border-green-800">
+            <section id="formBody" class="bg-white text-center font-serif rounded-b-lg border border-green-800">
                 
 
                 <form id="loginForm" action="" class="mt-6 px-4 flex flex-col text-left">
-                    <label for="username">Usuário</label>
+
+                    <label id="userLabel" for="username">Usuário</label>
                     <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="username" id="username">
 
-                    <label for="userEmail">Email</label>
+                    <label id="emailLabel" for="userEmail">Email</label>
                     <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="email" name="userEmail" id="userEmail">
 
-                    <label for="userPassword">Senha</label>
+                    <label id="passwordLabel" for="userPassword">Senha</label>
                     <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="password" name="userPassword" id="userPassword">
+
+                    <div id="returnOption" class="hidden py-2">Deseja usar outro login? <span id="returnLink" class="cursor-pointer text-red-700">Retornar</span></div>
 
                     <button id="loginButton" type="submit" class="bg-green-800 w-24 mt-3 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">Login</button>
                 
@@ -49,7 +52,7 @@
 
 
         <!--TELA CADASTRO-->
-        <div id="signUpScreen" class="bg-white bg-opacity-55 w-80 mx-auto m-auto rounded-md shadow-xl hidden">
+        <div id="signUpScreen" class="bg-white bg-opacity-55 w-80 mx-auto m-auto rounded-md shadow-xl font-serif hidden">
 
             <section>
                 <div class="bg-green-800 rounded-t-md text-center">
