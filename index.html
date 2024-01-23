@@ -11,32 +11,39 @@
     <div class="bg-slate-100 h-svh flex justify-center items-center">
 
         <!--TELA CENTRAL-->
-        <div class="bg-slate-300 bg-opacity-55 w-80 mx-auto p-6 m-auto rounded-md">
+        <div class="bg-white bg-opacity-55 w-96 mx-auto m-auto rounded-md shadow-xl">
             
             <!--IMAGEM-->
-            <section>
-                <img class="w-60 m-auto rounded-md" src="./public/assets/img/logo.jpeg" alt="">
+            <section class="text-center font-serif bg-green-800 p-4 rounded-t-xl">
+                <img class="m-auto rounded-xl mb-4" src="./public/assets/img/logo.jpeg" alt="">
+
+                <span class="text-lg uppercase font-medium text-white">Bem-vindo(a)!</span>
             </section>
         
-            <!--FORMULÁRIO-->
-            <section class="mt-10 text-center">
-                <span class="text-xl uppercase font-bold">Bem-vindo(a)!</span>
+            <!--FORMULÁRIOS-->
+            <section id="forms" class="text-center font-serif rounded-b-lg border border-green-800">
+                
 
-                <form action="" class="mt-6 flex flex-col">
-                    <label for="">Usuário</label>
-                    <input type="text" name="" id="">
+                <form id="formLogin" action="" class="mt-6 px-4 flex flex-col text-left">
+                    <label for="username">Usuário</label>
+                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="username" id="username">
 
-                    <label for="">Email</label>
-                    <input type="email" name="" id="">
+                    <label for="userEmail">Email</label>
+                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="email" name="userEmail" id="userEmail">
 
-                    <label for="">Senha</label>
-                    <input type="password" name="" id="">
+                    <label for="userPassword">Senha</label>
+                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="password" name="userPassword" id="userPassword">
 
-                    <button id="loginButton" type="submit" class="bg-green-500 w-24 mt-6 mx-auto p-2">Login</button>
+                    <button id="loginButton" type="submit" class="bg-green-800 w-24 mt-3 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">Login</button>
                 </form>
 
-                <div class="mt-4 text-left">
-                    <p>Não é cadastrado? <button class="text-green-700">Cadastre-se</button></p>
+                <form id="singupForm" class="hidden">
+                    <label for="">Usuário</label>
+                    <input type="text" name="" id="">
+                </form>
+
+                <div class="py-2 px-3 mt-6 text-left">
+                    <p>Não é cadastrado? <button id="signupButton" class="text-green-800">Cadastre-se</button></p>
                 </div>
             </section>
         </div>
