@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-bt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +7,26 @@
     <link href="./public/style.css" rel="stylesheet">
 </head>
 <body>
-    <!--TELA DE LOGIN-->
+
+    <!--TELA CENTRAL-->
     <div class="bg-slate-100 h-svh flex justify-center items-center">
 
-        <!--TELA CENTRAL-->
-        <div class="bg-white bg-opacity-55 w-96 mx-auto m-auto rounded-md shadow-xl">
+
+        <!--TELA LOGIN-->
+        <div id="loginScreen" class="bg-white bg-opacity-55 w-80 mx-auto m-auto rounded-md shadow-xl">
             
             <!--IMAGEM-->
-            <section class="text-center font-serif bg-green-800 p-4 rounded-t-xl">
+            <section id="formHead" class="text-center font-serif bg-green-800 p-4 rounded-t-xl">
                 <img class="m-auto rounded-xl mb-4" src="./public/assets/img/logo.jpeg" alt="">
 
                 <span class="text-lg uppercase font-medium text-white">Bem-vindo(a)!</span>
             </section>
         
-            <!--FORMULÁRIOS-->
-            <section id="forms" class="text-center font-serif rounded-b-lg border border-green-800">
+            <!--FORMULÁRIO LOGIN-->
+            <section id="formBody" class="text-center font-serif rounded-b-lg border border-green-800">
                 
 
-                <form id="formLogin" action="" class="mt-6 px-4 flex flex-col text-left">
+                <form id="loginForm" action="" class="mt-6 px-4 flex flex-col text-left">
                     <label for="username">Usuário</label>
                     <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="username" id="username">
 
@@ -35,18 +37,50 @@
                     <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="password" name="userPassword" id="userPassword">
 
                     <button id="loginButton" type="submit" class="bg-green-800 w-24 mt-3 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">Login</button>
-                </form>
-
-                <form id="singupForm" class="hidden">
-                    <label for="">Usuário</label>
-                    <input type="text" name="" id="">
+                
                 </form>
 
                 <div class="py-2 px-3 mt-6 text-left">
-                    <p>Não é cadastrado? <button id="signupButton" class="text-green-800">Cadastre-se</button></p>
+                    <p>Não é cadastrado? <button id="signUpScreenButton" class="text-green-800">Cadastre-se</button></p>
                 </div>
             </section>
         </div>
+
+
+
+        <!--TELA CADASTRO-->
+        <div id="signUpScreen" class="bg-white bg-opacity-55 w-80 mx-auto m-auto rounded-md shadow-xl hidden">
+
+            <section>
+                <div class="bg-green-800 rounded-t-md text-center">
+                    <p class="p-4 uppercase text-white font-semibold">Cadastro</p>
+                </div>
+            </section>
+
+            <!--Formulário Cadastro-->
+            <section>
+                <form id="singUpForm" class="mt-6 px-4 flex flex-col text-left">
+                    <label for="singUpuser">Usuário</label>
+                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="singUpUser" id="singUpUser">
+
+                    <label for="signUpEmail">Email</label>
+                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="signUpEmail" id="signUpEmail">
+
+                    <label for="singUpPassword">Senha</label>
+                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="singUpPassword" id="singUpPassword">
+
+                    <button id="registerButton" type="submit" class="bg-green-800 w-24 mt-3 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">Cadastrar</button>
+                </form>
+            </section>
+
+            <div class="py-2 px-3 mt-6 text-left">
+                <p>Já é cadastrado? <button id="backButton" class="text-green-800">Faça o login</button></p>
+            </div>
+
+        </div>
+
+
     </div>
+    <script src="./public/assets/js/userInteraction.js"></script>
 </body>
 </html>
