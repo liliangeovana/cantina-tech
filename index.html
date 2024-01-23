@@ -29,30 +29,38 @@
                 <form id="loginForm" action="" class="mt-6 px-4 flex flex-col text-left" autocomplete="off">
 
                     <div id="userLogin" class="flex flex-col">
-                        <label id="userLabel" for="username">Usuário</label>
-                        <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="username" id="username">
+                        <label id="userLabel" for="username">CPF</label>
+                        <input 
+                            class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                        type="number" name="cpf" id="cpf">
                     </div>
 
                     <div id="emailLogin" class="flex flex-col">
                         <label id="emailLabel" for="userEmail">Email</label>
-                        <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="email" name="userEmail" id="userEmail">
+                        <input 
+                            class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900"
+                        type="email" name="userEmail" id="userEmail">
                     </div>
 
                     <div id="passwordLogin" class="flex flex-col">
                         <label id="passwordLabel" for="userPassword">Senha</label>
-                        <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="password" name="userPassword" id="userPassword">
+                        <input 
+                            class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                        type="password" name="userPassword" id="userPassword">
                     </div>
 
                     <div id="returnOption" class="hidden py-2">Usar outra forma de login? 
                         <span id="returnLink" class="cursor-pointer text-red-700">Retornar</span>
                     </div>
 
-                    <button id="loginButton" type="submit" class="bg-green-800 w-24 mt-3 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">Login</button>
+                    <button id="loginButton" type="submit" 
+                        class="bg-green-800 w-24 mt-3 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">
+                    Login</button>
                 
                 </form>
 
                 <div class="py-2 px-3 mt-6 text-left">
-                    <p>Não é cadastrado? <button onclick="cadastrar()" id="signUpScreenButton" class="text-green-800">Cadastre-se</button></p>
+                    <p>Não é cadastrado? <button id="signUpScreenButton" class="text-green-800">Cadastre-se</button></p>
                 </div>
             </section>
         </div>
@@ -70,20 +78,36 @@
 
             <!--Formulário Cadastro-->
             <section>
-                <form id="singUpForm" method="GET" class="mt-6 px-4 flex flex-col text-left " autocomplete="off">
-                    <label for="singUpuser">Usuário</label>
-                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="singUpUser" id="singUpUser">
+                <form id="singUpForm" class="mt-6 px-4 flex flex-col text-left " autocomplete="off">
+
+                    <label for="singUpName">Nome</label>
+                    <input 
+                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                    type="text" name="singUpName" id="singUpName">
+
+                    <label for="singUpuser">CPF</label>
+                    <input 
+                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                    type="number" name="singCpf" id="singUpCpf">
 
                     <label for="signUpEmail">Email</label>
-                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="email" name="signUpEmail" id="signUpEmail">
+                    <input 
+                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                    type="email" name="signUpEmail" id="signUpEmail">
 
                     <label for="singUpPassword">Senha</label>
-                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="password" name="singUpPassword" id="singUpPassword">
+                    <input 
+                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                    type="password" name="singUpPassword" id="singUpPassword">
 
-                    <label for="confirmSingUpPassword">Confirmar Senha</label>
-                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="password" name="confirmSingUpPassword" id="confirmSingUpPassword">
+                    <label for="confirmPassword">Confirmar Senha</label>
+                    <input 
+                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                    type="password" name="confirmPassword" id="confirmPassword">
 
-                    <button id="registerButton" type="submit" class="bg-green-800 w-24 mt-3 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">Cadastrar</button>
+                    <button id="registerButton" type="submit" 
+                        class="bg-green-800 w-24 mt-3 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">
+                    Cadastrar</button>
                 </form>
             </section>
 
@@ -96,6 +120,7 @@
 
     </div>
     <script src="./public/assets/js/userInteraction.js"></script>
+    <script src="./public/assets/js/validation.js"></script>
     <script src="./public/assets/js/singUp.js"></script>
 </body>
 </html>

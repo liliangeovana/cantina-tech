@@ -1,3 +1,13 @@
+ //CAMPOS LOGIN
+var userLogin = document.getElementById('userLogin');
+var cpfInput = document.getElementById('cpf');
+
+var emailLogin = document.getElementById('emailLogin');
+var emailInput = document.getElementById('userEmail');
+
+var returnOption = document.getElementById('returnOption');
+var returnLink = document.getElementById('returnLink');
+
 //BOTÃO CADASTRE-SE
 document.addEventListener("DOMContentLoaded", function () {
     const savedScreen = localStorage.getItem("currentScreen");
@@ -27,18 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    //CAMPOS
-    var userLogin = document.getElementById('userLogin');
-    var usernameInput = document.getElementById('username')
-
-    var emailLogin = document.getElementById('emailLogin');
-    var emailInput = document.getElementById('userEmail')
-
-    var returnOption = document.getElementById('returnOption');
-    var returnLink = document.getElementById('returnLink');
+//CAMPOS TELA DE LOGIN
 
     //SE SELECIONADO USUÁRIO
-    usernameInput.addEventListener('focus', function () {
+    cpfInput.addEventListener('focus', function () {
         emailLogin.style.display = 'none';
         returnOption.style.display = 'block';
     });
