@@ -62,15 +62,15 @@
 
             <!--Formulário Cadastro-->
             <section>
-                <form id="singUpForm" class="mt-6 px-4 flex flex-col text-left">
+                <form id="singUpForm" method="GET" class="mt-6 px-4 flex flex-col text-left ">
                     <label for="singUpuser">Usuário</label>
                     <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="singUpUser" id="singUpUser">
 
                     <label for="signUpEmail">Email</label>
-                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="signUpEmail" id="signUpEmail">
+                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="email" name="signUpEmail" id="signUpEmail">
 
                     <label for="singUpPassword">Senha</label>
-                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="singUpPassword" id="singUpPassword">
+                    <input class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="password" name="singUpPassword" id="singUpPassword">
 
                     <button id="registerButton" type="submit" class="bg-green-800 w-24 mt-3 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">Cadastrar</button>
                 </form>
@@ -85,5 +85,6 @@
 
     </div>
     <script src="./public/assets/js/userInteraction.js"></script>
+    <script src="./public/assets/js/singUp.js"></script>
 </body>
 </html>
