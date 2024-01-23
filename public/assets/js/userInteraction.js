@@ -28,35 +28,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     //CAMPOS
-    var usernameLabel = document.getElementById('userLabel');
-    var usernameInput = document.getElementById('username');
+    var userLogin = document.getElementById('userLogin');
+    var usernameInput = document.getElementById('username')
 
-    var emailInput = document.getElementById('userEmail');
-    var emailLabel = document.getElementById('emailLabel');
+    var emailLogin = document.getElementById('emailLogin');
+    var emailInput = document.getElementById('userEmail')
 
     var returnOption = document.getElementById('returnOption');
     var returnLink = document.getElementById('returnLink');
 
     //SE SELECIONADO USUÁRIO
     usernameInput.addEventListener('focus', function () {
-        emailLabel.style.display = 'none';
-        emailInput.style.display = 'none';
+        emailLogin.style.display = 'none';
         returnOption.style.display = 'block';
     });
 
     //SE SELECIONADO EMAIL
     emailInput.addEventListener('focus', function () {
-        username.style.display = 'none';
-        usernameLabel.style.display = 'none';
+        userLogin.style.display = 'none';
         returnOption.style.display = 'block';
     });
 
     //VOLTAR ÀS OPÇÕES
     returnLink.addEventListener('click', function () {
-        usernameInput.style.display = 'block';
-        usernameLabel.style.display = 'block';
-        emailInput.style.display = 'block';
-        emailLabel.style.display = 'block';
+        userLogin.style.display = 'flex';
+        emailLogin.style.display = 'flex';
         returnOption.style.display = 'none';
     })
 });
