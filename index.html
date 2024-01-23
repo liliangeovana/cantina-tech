@@ -6,7 +6,7 @@
     <title>Acessar | Cantina Tech</title>
     <link href="./public/style.css" rel="stylesheet">
 </head>
-<body class="bg-slate-100" >
+<body class="bg-slate-100 h-screen">
 
     <!--TELA CENTRAL-->
     <div class="flex flex-col justify-center items-center p-6">
@@ -60,60 +60,14 @@
                 </form>
 
                 <div class="py-2 px-3 mt-6 text-left">
-                    <p>Não é cadastrado? <button id="signUpScreenButton" class="text-green-800">Cadastre-se</button></p>
+                    <p>Não é cadastrado? <a href="./public/view/singUp.html" class="text-green-800">Cadastre-se</a></p>
                 </div>
             </section>
         </div>
 
 
 
-        <!--TELA CADASTRO-->
-        <div id="signUpScreen" class="bg-white bg-opacity-55 w-80 mx-auto m-auto rounded-md shadow-xl font-serif hidden">
-
-            <section>
-                <div class="bg-green-800 rounded-t-md text-center">
-                    <p class="p-4 uppercase text-white font-semibold">Cadastro</p>
-                </div>
-            </section>
-
-            <!--Formulário Cadastro-->
-            <section>
-                <form id="singUpForm" class="mt-6 px-4 flex flex-col text-left " autocomplete="off">
-
-                    <label for="singUpName">Nome</label>
-                    <input 
-                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    type="text" name="singUpName" id="singUpName">
-
-                    <label for="singUpuser">CPF</label>
-                    <input 
-                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    type="number" name="singCpf" id="singUpCpf">
-
-                    <label for="signUpEmail">Email</label>
-                    <input 
-                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    type="email" name="signUpEmail" id="signUpEmail">
-
-                    <label for="singUpPassword">Senha</label>
-                    <input 
-                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    type="password" name="singUpPassword" id="singUpPassword">
-
-                    <label for="confirmPassword">Confirmar Senha</label>
-                    <input 
-                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    type="password" name="confirmPassword" id="confirmPassword">
-
-                    <button id="registerButton" type="submit" 
-                        class="bg-green-800 w-24 mt-3 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">
-                    Cadastrar</button>
-                </form>
-            </section>
-
-            <div class="py-2 px-3 mt-6 text-left">
-                <p>Já é cadastrado? <button id="backButton" class="text-green-800">Faça o login</button></p>
-            </div>
+        
 
         </div>
 
