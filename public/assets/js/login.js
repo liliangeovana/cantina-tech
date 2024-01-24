@@ -8,35 +8,27 @@ loginButton.addEventListener('click', function (e) {
     e.preventDefault(); 
 
     var inputCpf = cpfInput.value;
-    var inputEmail = emailInput.value;
+    var inputEmail = emailInput.value.toLowerCase();  // Convertendo para minúsculas
     var inputPassword = passwordInput.value;
 
     // Obter os usuários armazenados no localStorage
     var users = JSON.parse(localStorage.getItem('users')) || [];
 
-    // Verificar qual campo está visível para autenticação
-    var foundUser = null;
-    if (cpfInput.style.display !== 'none') {
-        foundUser = users.find(function (user) {
-            return user.cpf === inputCpf;
-        });
-    } else {
-        foundUser = users.find(function (user) {
-            return user.email === inputEmail;
-        });
-    }
+    // Procurar pelo usuário com base no CPF ou e-mail
+    var foundUser = users.find(function (user) {
+        return (user.cpf === inputCpf || user.email.toLowerCase() === inputEmail);
+    });
 
     // Verificar se o usuário foi encontrado e se a senha corresponde
     if (foundUser && inputPassword === foundUser.password) {
         // Se os valores forem iguais, redirecionar para home.html
         redirectToHome();
     } else {
-        // Se os valores não coincidirem, exibir uma mensagem de erro, por exemplo
+        // Se os valores não coincidirem, exibir uma mensagem de erro
         alert('Credenciais inválidas. Por favor, tente novamente.');
     }
 });
 
-// Função para redirecionar para home.html
 function redirectToHome() {
     window.location.href = './public/view/home.html';
 }

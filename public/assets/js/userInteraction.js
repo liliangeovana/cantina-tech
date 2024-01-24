@@ -11,8 +11,7 @@ var returnLink = document.getElementById('returnLink');
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    $('#cpf').inputmask();
-    
+
     //SE SELECIONADO USUÁRIO
     cpfInput.addEventListener('focus', function () {
         emailLogin.style.display = 'none';
