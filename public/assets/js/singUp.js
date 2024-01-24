@@ -38,9 +38,17 @@ document.getElementById('registerButton').addEventListener('click', function(e) 
     localStorage.setItem('users', JSON.stringify(users));
 
     Swal.fire({
+        title: "Cadastro realizado",
         icon: "success",
-        text: "Cadastro realizado com sucesso!",
-        footer: '<a href="../../index.html">Login</a>'
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonText: `Login`,
+        }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            // Redirecionar para a tela de login
+            window.location.href = "../../index.html";
+        }
       });
     console.log(users);
 });
