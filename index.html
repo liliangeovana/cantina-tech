@@ -6,27 +6,27 @@
     <title>Acessar | Cantina Tech</title>
     <link href="./public/style.css" rel="stylesheet">
 </head>
-<body class="bg-slate-100 h-screen">
+<body>
 
     <!--TELA CENTRAL-->
-    <div class="flex flex-col justify-center items-center p-6">
+    <div class="h-svh">
  
         <!--TELA LOGIN-->
-        <div id="loginScreen" class="bg-white bg-opacity-55 w-80 mx-auto mt-10 rounded-md shadow-xl">
+        <div id="loginScreen" class="bg-white bg-opacity-55">
             
             <!--IMAGEM-->
-            <section id="formHead" class="text-center font-serif bg-green-800 p-4 rounded-t-xl">
-                <img class="m-auto rounded-xl mb-4" src="./public/assets/img/logo.jpeg" alt="">
-
-                <span class="text-lg uppercase font-medium text-white">Bem-vindo(a)!</span>
+            <section id="formHead" class="text-center font-serif bg-green-800 shadow-lg">
+                <div class="m-auto p-12">
+                    <img class="rounded-lg shadow-2xl" src="./public/assets/img/logo.jpeg" alt="">
+                </div>
             </section>
        
         
             <!--FORMULÁRIO LOGIN-->
-            <section id="formBody" class="bg-white text-center font-serif rounded-b-lg border border-green-800">
+            <section id="formBody" class=" text-center font-serif">
                 
 
-                <form id="loginForm" action="" class="mt-6 px-4 flex flex-col text-left" autocomplete="off">
+                <form id="loginForm" action="" class="mt-6 px-8 flex flex-col text-left" autocomplete="off">
 
                     <div id="userLogin" class="flex flex-col">
                         <label id="userLabel" for="cpf">CPF</label>
@@ -54,12 +54,12 @@
                     </div>
 
                     <button id="loginButton" type="submit" 
-                        class="bg-green-800 w-24 mt-3 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">
+                        class="bg-green-800 w-24 mt-8 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">
                     Login</button>
                 
                 </form>
 
-                <div class="py-2 px-3 mt-6 text-left">
+                <div class="py-2  mt-6 ">
                     <p>Não é cadastrado? <a href="./public/view/singUp.html" class="text-green-800">Cadastre-se</a></p>
                 </div>
             </section>
