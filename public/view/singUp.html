@@ -6,48 +6,48 @@
     <title>Cadastro | Cantina Tech</title>
     <link href="../style.css" rel="stylesheet">
 </head>
-<body class="bg-slate-100">
+<body class="bg-slate-100 h-screen md:bg-white">
 
     <!--TELA CENTRAL-->
-    <div class="h-screen flex justify-center items-center">
+    <div class="h-svh flex justify-center items-center md:block">
 
         <!--TELA CADASTRO-->
-        <div id="signUpScreen" class="bg-white w-80 bg-opacity-55 font-serif shadow-xl">
+        <div id="signUpScreen" class="bg-white w-80 bg-opacity-55 font-serif shadow-xl rounded-md md:w-full md:rounded-none md:shadow-none">
 
-            <section class="bg-green-800 text-center">
-                <div class="p-4 uppercase text-white font-semibold">
-                    Cadastro
+            <section class="bg-green-800 text-center rounded-t-md md:rounded-none">
+                <div class="p-4 uppercase text-white font-semibold rounded-t-md md:rounded-none">
+                    Solicitação de cadastro
                 </div>
             </section>
 
             <!--Formulário Cadastro-->
             <section>
-                <form id="singUpForm" class="mt-10 p-6 flex flex-col text-left" autocomplete="off">
+                <form id="singUpForm" class="mt-10 px-6 flex flex-col text-left md:mt-6 md:mx-36 lg:mx-72" autocomplete="off">
 
                     <label for="singUpName">Nome</label>
                     <input 
-                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    placeholder="Insira seu nome e sobrenome"  type="text" name="singUpName" id="singUpName">
+                        class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                    placeholder="Nome e sobrenome"  type="text" name="singUpName" id="singUpName">
 
                     <label for="singUpuser">CPF</label>
                     <input 
-                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                        class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
                     placeholder="00000000000"  type="text" name="singCpf" id="singUpCpf">
 
                     <label for="signUpEmail">Email</label>
                     <input 
-                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                        placeholder="email@....com" type="email" name="signUpEmail" id="signUpEmail">
+                        class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                        placeholder="nome@email.com" type="email" name="signUpEmail" id="signUpEmail">
 
                     <label for="singUpPassword">Senha</label>
                     <input 
-                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    type="password" name="singUpPassword" id="singUpPassword">
+                        class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                        placeholder="******"  type="password" name="singUpPassword" id="singUpPassword">
 
                     <label for="confirmPassword">Confirmar Senha</label>
                     <input 
-                        class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    type="password" name="confirmPassword" id="confirmPassword">
+                        class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                        placeholder="******" type="password" name="confirmPassword" id="confirmPassword">
 
                     <button id="registerButton" type="submit" 
                         class="bg-green-800 w-24 mt-4 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">
@@ -55,7 +55,7 @@
                 </form>
             </section>
 
-            <div class="mt-2 p-6 text-center">
+            <div class="mt-2 p-6 text-center md:p-4">
                 <p>Já é cadastrado? <a href="../../index.html" id="backButton" class="text-green-800">Faça o login</a></p>
             </div>
 
