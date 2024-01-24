@@ -12,7 +12,7 @@
     <div class="flex flex-col justify-center items-center p-6">
  
         <!--TELA LOGIN-->
-        <div id="loginScreen" class="bg-white bg-opacity-55 w-80 mx-auto rounded-md shadow-xl">
+        <div id="loginScreen" class="bg-white bg-opacity-55 w-80 mx-auto mt-10 rounded-md shadow-xl">
             
             <!--IMAGEM-->
             <section id="formHead" class="text-center font-serif bg-green-800 p-4 rounded-t-xl">
@@ -29,10 +29,10 @@
                 <form id="loginForm" action="" class="mt-6 px-4 flex flex-col text-left" autocomplete="off">
 
                     <div id="userLogin" class="flex flex-col">
-                        <label id="userLabel" for="username">CPF</label>
-                        <input 
+                        <label id="userLabel" for="cpf">CPF</label>
+                        <input data-inputmask="'mask': '999.999.999-99'" placeholder=" "
                             class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                        type="number" name="cpf" id="cpf">
+                        type="text" name="cpf" id="cpf">
                     </div>
 
                     <div id="emailLogin" class="flex flex-col">
@@ -75,6 +75,8 @@
     </div>
     <script src="./public/assets/js/userInteraction.js"></script>
     <script src="./public/assets/js/validation.js"></script>
-    <script src="./public/assets/js/singUp.js"></script>
+    <script src="./public/assets/js/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
 </body>
 </html>

@@ -12,11 +12,11 @@
     <div class="flex flex-col justify-center items-center p-6">
 
         <!--TELA CADASTRO-->
-        <div id="signUpScreen" class="bg-white bg-opacity-55 w-80 mx-auto m-auto rounded-md shadow-xl font-serif">
+        <div id="signUpScreen" class="bg-white bg-opacity-55 w-80 m-auto rounded-md shadow-xl font-serif">
 
-            <section>
-                <div class="bg-green-800 rounded-t-md text-center">
-                    <p class="p-4 uppercase text-white font-semibold">Cadastro</p>
+            <section class="bg-green-800 rounded-t-md text-center">
+                <div class="p-4 uppercase text-white font-semibold">
+                    Cadastro
                 </div>
             </section>
 
@@ -30,9 +30,9 @@
                     type="text" name="singUpName" id="singUpName">
 
                     <label for="singUpuser">CPF</label>
-                    <input 
+                    <input data-inputmask="'mask': '999.999.999-99'" placeholder=" "
                         class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    type="number" name="singCpf" id="singUpCpf">
+                    type="text" name="singCpf" id="singUpCpf">
 
                     <label for="signUpEmail">Email</label>
                     <input 
@@ -61,5 +61,10 @@
 
         </div>
     </div>
+
+    <script src="../assets/js/singUp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
 </body>
 </html>

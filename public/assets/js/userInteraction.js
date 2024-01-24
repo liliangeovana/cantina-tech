@@ -2,23 +2,17 @@
 var userLogin = document.getElementById('userLogin');
 var cpfInput = document.getElementById('cpf');
 
+
 var emailLogin = document.getElementById('emailLogin');
 var emailInput = document.getElementById('userEmail');
 
 var returnOption = document.getElementById('returnOption');
 var returnLink = document.getElementById('returnLink');
 
-//BOTÃO CADASTRE-SE
+
 document.addEventListener("DOMContentLoaded", function () {
-
-    document.getElementById("backButton").addEventListener("click", function () {
-        showLoginScreen();
-    });
-
-
-
-//CAMPOS TELA DE LOGIN
-
+    $('#cpf').inputmask();
+    
     //SE SELECIONADO USUÁRIO
     cpfInput.addEventListener('focus', function () {
         emailLogin.style.display = 'none';
