@@ -845,19 +845,6 @@ video {
   height: 100svh;
 }
 
-.h-96 {
-  height: 24rem;
-}
-
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.h-full {
-  height: 100%;
-}
-
 .w-24 {
   width: 6rem;
 }
@@ -1891,16 +1878,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-red-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
-}
-
-.bg-purple-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(192 132 252 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-55 {
   --tw-bg-opacity: 0.55;
 }
@@ -2108,11 +2085,6 @@ video {
 
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .font-bold {
@@ -2673,6 +2645,14 @@ video {
     display: flex;
   }
 
+  .md\:h-96 {
+    height: 24rem;
+  }
+
+  .md\:h-svh {
+    height: 100svh;
+  }
+
   .md\:w-full {
     width: 100%;
   }
@@ -2730,16 +2710,6 @@ video {
 
   .lg\:w-screen {
     width: 100vw;
-  }
-
-  .lg\:bg-slate-100 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(241 245 249 / var(--tw-bg-opacity));
-  }
-
-  .lg\:bg-yellow-400 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(250 204 21 / var(--tw-bg-opacity));
   }
 }
 

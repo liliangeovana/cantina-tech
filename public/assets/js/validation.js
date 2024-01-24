@@ -19,3 +19,13 @@ userName.addEventListener('input', function () {
         userName.classList.add('focus:border-blue-900');
     }
 });
+
+// Campo CPF
+cpf.addEventListener('input', function () {
+    // Obter o valor atual do campo e remover caracteres não numéricos
+    var inputValue = cpf.value.replace(/\D/g, '');
+
+    // Atualizar o valor no campo
+    cpf.value = inputValue;
+
+});
