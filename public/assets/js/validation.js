@@ -9,7 +9,7 @@ var confirmPassword = document.getElementById('confirmPassword');
 userName.addEventListener('input', function () {
     var inputValue = userName.value;
    // Verificar se o valor contém apenas letras usando uma expressão regular
-    if (/[^a-zA-Z]/.test(inputValue)) {
+    if (/[^a-zA-ZÀ-ÖØ-öø-ÿ ]/.test(inputValue)) {
         // Se contiver números, aplicar borda vermelha
         userName.classList.remove('focus:border-blue-900');
         userName.classList.add('focus:border-red-400');
