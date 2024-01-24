@@ -27,17 +27,17 @@
                     <label for="singUpName">Nome</label>
                     <input 
                         class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    type="text" name="singUpName" id="singUpName">
+                    placeholder="Insira seu nome e sobrenome"  type="text" name="singUpName" id="singUpName">
 
                     <label for="singUpuser">CPF</label>
-                    <input data-inputmask="'mask': '999.999.999-99'" placeholder=" "
+                    <input 
                         class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    type="text" name="singCpf" id="singUpCpf">
+                    placeholder="00000000000"  type="text" name="singCpf" id="singUpCpf">
 
                     <label for="signUpEmail">Email</label>
                     <input 
                         class="bg-gray-100 border rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    type="email" name="signUpEmail" id="signUpEmail">
+                        placeholder="email@....com" type="email" name="signUpEmail" id="signUpEmail">
 
                     <label for="singUpPassword">Senha</label>
                     <input 
@@ -63,6 +63,7 @@
     </div>
 
     <script src="../assets/js/singUp.js"></script>
+    <script src="../assets/js/validation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
