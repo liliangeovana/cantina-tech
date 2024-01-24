@@ -25,7 +25,41 @@ cpf.addEventListener('input', function () {
     // Obter o valor atual do campo e remover caracteres não numéricos
     var inputValue = cpf.value.replace(/\D/g, '');
 
+    // Limitar a quantidade de caracteres para 11
+    if (inputValue.length > 11) {
+        inputValue = inputValue.slice(0, 11);
+    }
+
+    // Formatando o CPF (XXX.XXX.XXX-XX)
+if (inputValue.length > 3) {
+    const groups = inputValue.match(/(\d{1,3})/g).filter(Boolean);
+    inputValue = groups.join('.');
+  
+    if (groups.length > 2) {
+        const lastGroup = groups.pop();
+        inputValue = groups.join('.') + '-' + lastGroup;
+    }
+}
     // Atualizar o valor no campo
     cpf.value = inputValue;
+});
 
+
+// Campo Confirmar Senha
+confirmPassword.addEventListener('input', function () {
+    var inputPasswordValue = password.value;
+    var inputConfirmPasswordValue = confirmPassword.value;
+
+    confirmPassword.classList.remove('focus:border-blue-900');
+
+    // Verificar se o valor da confirmação de senha coincide com a senha
+    if (inputConfirmPasswordValue === inputPasswordValue) {
+        // Se coincidir, remover a borda vermelha e adicionar a borda verde
+        confirmPassword.classList.remove('focus:border-red-400');
+        confirmPassword.classList.add('focus:border-green-500');
+    } else {
+        // Se não coincidir, remover a borda verde e adicionar a borda vermelha
+        confirmPassword.classList.remove('focus:border-green-400');
+        confirmPassword.classList.add('focus:border-red-400');
+    }
 });

@@ -25,8 +25,12 @@
             <!--FORMULÁRIO LOGIN-->
             <section id="formBody" class=" text-center font-serif mt-8 md:w-full md:justify-center lg:w-full">
                 
-
+            
                 <form id="loginForm" action="" class="mt-6 px-8 flex flex-col text-left md:mt-28 lg:mt-24 lg:mx-14" autocomplete="off">
+
+                    <div id="returnOption" class="hidden py-2 text-right">Usar outra forma de login? 
+                        <span id="returnLink" class="cursor-pointer text-red-700">Retornar</span>
+                    </div>
 
                     <div id="userLogin" class="flex flex-col">
                         <label id="userLabel" for="cpf">CPF</label>
@@ -47,10 +51,6 @@
                         <input 
                             class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
                         type="password" name="userPassword" id="userPassword">
-                    </div>
-
-                    <div id="returnOption" class="hidden py-2">Usar outra forma de login? 
-                        <span id="returnLink" class="cursor-pointer text-red-700">Retornar</span>
                     </div>
 
                     <button id="loginButton" type="submit" 
