@@ -2631,6 +2631,10 @@ video {
     margin-top: 1.5rem;
   }
 
+  .md\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
   .md\:flex {
     display: flex;
   }

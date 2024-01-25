@@ -16,63 +16,77 @@
 
             <section class="bg-green-800 text-center  md:rounded-none">
                 <div class="p-4 uppercase text-white font-semibold rounded-t-md md:rounded-none">
-                    Solicitação de cadastro
+                    Cadastrar Usuário
                 </div>
             </section>
 
             <!--Formulário Cadastro-->
             <section>
-                <form id="registerSolicitationForm" class="mt-10 px-6 flex flex-col text-left md:mt-6 md:mx-36 lg:mx-72" autocomplete="off">
+                <form id="userRegisterForm" class="mt-10 px-6 flex flex-col text-left md:mt-6 md:mx-36 lg:mx-72" autocomplete="off">
 
                     <div id="Error" class="text-sm text-red-600 text-right"></div>
 
                     <!--Nome-->
-                    <label for="registerSolicitationName">Nome</label>
+                    <label for="userRegisterName">Nome</label>
                     <input 
                         class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    placeholder="Nome e sobrenome"  type="text" name="registerSolicitationName" id="registerSolicitationName">
+                    placeholder="Nome e sobrenome"  type="text" name="userRegisterName" id="userRegisterName">
 
                     <!--CPF-->
-                    <label for="registerSolicitationCPF">CPF</label>
+                    <label for="userRegisterCPF">CPF</label>
                     <input 
                         class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    placeholder="00000000000"  type="text" name="registerSolicitationCPF" id="registerSolicitationCPF">
+                    placeholder="00000000000"  type="text" name="userRegisterCPF" id="userRegisterCPF" oninput="formatarCPF(this)">
 
                     <!--Email-->
-                    <label for="registerSolicitationEmail">Email</label>
+                    <label for="userRegisterEmail">Email</label>
                     <input 
                         class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    placeholder="nome@email.com" type="email" name="registerSolicitationEmail" id="registerSolicitationEmail">
+                        placeholder="nome@email.com" type="email" name="userRegisterEmail" id="userRegisterEmail">
 
                     <!--Celular-->
-                    <label for="registerSolicitationNumber">Celular</label>
+                    <label for="userRegisterNumber">Celular</label>
                     <input
                         class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                    placeholder="99999999999"  type="tel" name="registerSolicitationNumber" id="registerSolicitationNumber">
+                    placeholder="99999999999"  type="tel" name="userRegisterNumber" id="userRegisterNumber">
 
-                    <label for="registerSolicitationSchool">Escola</label>
+                    <!--Escola-->
+                    <label for="userRegisterSchool">Escola</label>
                     <select
                     class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900"
-                    id="registerSolicitationSchool" name="registerSolicitationSchool">
+                    id="userRegisterSchool" name="userRegisterSchool">
                         <option value="opcao1">Opção 1</option>
                         <option value="opcao2">Opção 2</option>
                     </select>
 
+                    <!--Senha-->
+                    <label for="userRegisterPassword">Senha</label>
+                    <input 
+                        class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                        placeholder="******"  type="password" name="userRegisterPassword" id="userRegisterPassword">
+                    
+                    <!--Confirmar senha-->
+                    <label for="userRegisterConfirmPassword">Confirmar Senha</label>
+                    <input 
+                        class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
+                        placeholder="******" type="password" name="userRegisterConfirmPassword" id="userRegisterConfirmPassword">
+                    
+                    
+
                     <button id="registerButton" type="submit" 
                         class="bg-green-800 w-24 mt-4 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">
-                    Solicitar</button>
+                    Cadastrar</button>
                 </form>
             </section>
 
             <div class="mt-2 p-6 text-center md:p-4">
-                <p>Já é cadastrado? <a href="../../index.html" id="backButton" class="text-green-800">Faça o login</a></p>
+                <p><a href="../../index.html" id="backButton" class="text-green-800">Voltar</a></p>
             </div>
 
         </div>
     </div>
 
-    <script src="../assets/js/registerSolicitation.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../assets/js/userRegister.js"></script>
     <script src="../assets/js/validation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

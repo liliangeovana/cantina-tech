@@ -3,7 +3,7 @@ var cpfLogin = document.getElementById('cpf');
 var userLoginCpf = document.getElementById('userLogin')
 
 //CAMPOS CADASTRO
-var userName = document.getElementById('registerSolicitationName')
+var userName = document.getElementById('userRegisterName')
 var cpf = document.getElementById('registerSolicitationCPF');
 var email = document.getElementById('registerSolicitationEmail');
 
