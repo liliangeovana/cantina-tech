@@ -15,7 +15,7 @@ document.getElementById('registerButton').addEventListener('click', function(e) 
 
     //usuários já cadastrados do localStorage
     var users = JSON.parse(localStorage.getItem('users')) || [];
-
+    
     // Adicionar o novo usuário ao array
     if(!name || !cpf || !email || !password){
         Swal.fire({

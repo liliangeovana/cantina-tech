@@ -4,12 +4,13 @@ var cpf = document.getElementById('singUpCpf');
 var email = document.getElementById('signUpEmail');
 var password = document.getElementById('singUpPassword');
 var confirmPassword = document.getElementById('confirmPassword');
+var Error = document.getElementById('Error');
 
 //Campo nome
 userName.addEventListener('input', function () {
     var inputValue = userName.value;
    // Verificar se o valor contém apenas letras usando uma expressão regular
-    if (/[^a-zA-ZÀ-ÖØ-öø-ÿ ]/.test(inputValue)) {
+    if (/[^a-zA-ZÀ-ÖØ-öø-ÿ ]/.test(inputValue) ) {
         // Se contiver números, aplicar borda vermelha
         userName.classList.remove('focus:border-blue-900');
         userName.classList.add('focus:border-red-400');
@@ -57,9 +58,15 @@ confirmPassword.addEventListener('input', function () {
         // Se coincidir, remover a borda vermelha e adicionar a borda verde
         confirmPassword.classList.remove('focus:border-red-400');
         confirmPassword.classList.add('focus:border-green-500');
+
+        // Limpar a mensagem de erro
+        Error.textContent = '';
     } else {
         // Se não coincidir, remover a borda verde e adicionar a borda vermelha
-        confirmPassword.classList.remove('focus:border-green-400');
+        confirmPassword.classList.remove('focus:border-green-500');
         confirmPassword.classList.add('focus:border-red-400');
+
+        // Exibir a mensagem de erro
+        Error.textContent = 'As senhas não coincidem';
     }
 });
