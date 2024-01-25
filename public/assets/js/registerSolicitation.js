@@ -2,54 +2,78 @@ var signUpForm = document.getElementById('registerSolicitationForm');
 var nameInput = document.getElementById('registerSolicitationName');
 var cpfInput = document.getElementById('registerSolicitationCPF');
 var emailInput = document.getElementById('registerSolicitationEmail');
-var passwordInput = document.getElementById('registerSolicitationPassword');
+var numberInput = document.getElementById('registerSolicitationNumber');
+var schoolSelect = document.getElementById('registerSolicitationSchool');
 
 
-document.getElementById('registerButton').addEventListener('click', function(e) {
+function sendEmail(userData) {
+    // Extrair os valores do objeto de usuário
+    var name = userData.name;
+    var cpf = userData.cpf;
+    var email = userData.email;
+    var number = userData.number;
+    var school = userData.school;
+
+    // Construir o corpo da mensagem de email com os detalhes do usuário
+    const bodyMessage = `Nome: ${name} <br> CPF: ${cpf} <br> Email: ${email} <br> Número: ${number} <br> Escola: ${school}`;
+
+    // Enviar email com os detalhes do usuário
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "lili.ggsb@gmail.com",
+        Password : "EE20FF5C1D1E63C0F9793CA8C368768417B0",
+        To : 'lili.ggsb@gmail.com',
+        From : "lili.ggsb@gmail.com",
+        Subject : "SOLICITAÇÃO DE REGISTRO",
+        Body : bodyMessage
+    }).then(
+      message => {
+        if (message === "OK"){
+            Swal.fire({
+                title: "Obrigada!",
+                text: "Mensagem enviada com sucesso!",
+                icon: "success"
+            });
+        }
+      }
+    );
+}
+
+signUpForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    // valores dos campos de entrada
+
+    // Valores dos campos de entrada
     var name = nameInput.value;
     var cpf = cpfInput.value;
     var email = emailInput.value;
-    var password = passwordInput.value;
+    var number = numberInput.value;
+    var school = schoolSelect.value;
 
-    //usuários já cadastrados do localStorage
-    var users = JSON.parse(localStorage.getItem('users')) || [];
-    
-    // Adicionar o novo usuário ao array
-    if(!name || !cpf || !email || !password){
+    // Verificar se todos os campos obrigatórios estão preenchidos
+    if (!name || !cpf || !email || !number) {
         Swal.fire({
             icon: "error",
             title: "Opa!",
-            text: "Por favor, preencha todos os campos.",
-          });
-        return
-    }else{
-        users.push({
-            name: name,
-            cpf: cpf,
-            email: email,
-            password: password
+            text: "Por favor, preencha todos os campos."
         });
+        return;
     }
-    
 
-    // Atualize os usuários no localStorage
-    localStorage.setItem('users', JSON.stringify(users));
+    // Criar um objeto de usuário com os detalhes
+    var user = {
+        name: name,
+        cpf: cpf,
+        email: email,
+        number: number,
+        school: school
+    };
 
-    Swal.fire({
-        title: "Cadastro realizado",
-        icon: "success",
-        showCloseButton: true,
-        focusConfirm: false,
-        confirmButtonText: `Login`,
-        }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
-            // Redirecionar para a tela de login
-            window.location.href = "../../index.html";
-        }
-      });
-    console.log(users);
+    // Chamar a função para enviar o e-mail com os detalhes do usuário
+    sendEmail(user);
+
+    // Limpar os campos do formulário após o envio
+    nameInput.value = "";
+    cpfInput.value = "";
+    emailInput.value = "";
+    numberInput.value = "";
 });
-

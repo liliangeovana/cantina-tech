@@ -26,30 +26,37 @@
 
                     <div id="Error" class="text-sm text-red-600 text-right"></div>
 
+                    <!--Nome-->
                     <label for="registerSolicitationName">Nome</label>
                     <input 
                         class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
                     placeholder="Nome e sobrenome"  type="text" name="registerSolicitationName" id="registerSolicitationName">
 
+                    <!--CPF-->
                     <label for="registerSolicitationCPF">CPF</label>
                     <input 
                         class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
                     placeholder="00000000000"  type="text" name="registerSolicitationCPF" id="registerSolicitationCPF">
 
+                    <!--Email-->
                     <label for="registerSolicitationEmail">Email</label>
                     <input 
                         class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                        placeholder="nome@email.com" type="email" name="registerSolicitationEmail" id="registerSolicitationEmail">
+                    placeholder="nome@email.com" type="email" name="registerSolicitationEmail" id="registerSolicitationEmail">
 
-                    <label for="registerSolicitationPassword">Senha</label>
-                    <input 
+                    <!--Celular-->
+                    <label for="registerSolicitationNumber">Celular</label>
+                    <input
                         class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                        placeholder="******"  type="password" name="registerSolicitationPassword" id="registerSolicitationPassword">
-                    
-                    <label for="registerSolicitationConfirmPassword">Confirmar Senha</label>
-                    <input 
-                        class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                        placeholder="******" type="password" name="registerSolicitationConfirmPassword" id="registerSolicitationConfirmPassword">
+                    placeholder="99999999999"  type="tel" name="registerSolicitationNumber" id="registerSolicitationNumber">
+
+                    <label for="registerSolicitationSchool">Escola</label>
+                    <select
+                    class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900"
+                    id="registerSolicitationSchool" name="registerSolicitationSchool">
+                        <option value="opcao1">Opção 1</option>
+                        <option value="opcao2">Opção 2</option>
+                    </select>
 
                     <button id="registerButton" type="submit" 
                         class="bg-green-800 w-24 mt-4 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">
@@ -65,6 +72,7 @@
     </div>
 
     <script src="../assets/js/registerSolicitation.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="../assets/js/validation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

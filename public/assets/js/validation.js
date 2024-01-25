@@ -6,9 +6,7 @@ var userLoginCpf = document.getElementById('userLogin')
 var userName = document.getElementById('registerSolicitationName')
 var cpf = document.getElementById('registerSolicitationCPF');
 var email = document.getElementById('registerSolicitationEmail');
-var password = document.getElementById('registerSolicitationPassword');
-var confirmPassword = document.getElementById('registerSolicitationConfirmPassword');
-var Error = document.getElementById('Error');
+
 
 
 
@@ -57,35 +55,3 @@ function formatarCPF(campoCPF) {
 // Aplicar formatação para o campo 'cpf'
 formatarCPF(cpf);
 
-
-
-
-
-
-
-
-
-// Campo Confirmar Senha
-confirmPassword.addEventListener('input', function () {
-    var inputPasswordValue = password.value;
-    var inputConfirmPasswordValue = confirmPassword.value;
-
-    confirmPassword.classList.remove('focus:border-blue-900');
-
-    // Verificar se o valor da confirmação de senha coincide com a senha
-    if (inputConfirmPasswordValue === inputPasswordValue) {
-        // Se coincidir, remover a borda vermelha e adicionar a borda verde
-        confirmPassword.classList.remove('focus:border-red-400');
-        confirmPassword.classList.add('focus:border-green-500');
-
-        // Limpar a mensagem de erro
-        Error.textContent = '';
-    } else {
-        // Se não coincidir, remover a borda verde e adicionar a borda vermelha
-        confirmPassword.classList.remove('focus:border-green-500');
-        confirmPassword.classList.add('focus:border-red-400');
-
-        // Exibir a mensagem de erro
-        Error.textContent = 'As senhas não coincidem';
-    }
-});
