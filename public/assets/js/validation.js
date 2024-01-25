@@ -1,3 +1,7 @@
+//CAMPOS LOGIN
+var cpfLogin = document.getElementById('cpf');
+var userLoginCpf = document.getElementById('userLogin')
+
 //CAMPOS CADASTRO
 var userName = document.getElementById('singUpName')
 var cpf = document.getElementById('singUpCpf');
@@ -5,6 +9,8 @@ var email = document.getElementById('signUpEmail');
 var password = document.getElementById('singUpPassword');
 var confirmPassword = document.getElementById('confirmPassword');
 var Error = document.getElementById('Error');
+
+
 
 //Campo nome
 userName.addEventListener('input', function () {
@@ -22,28 +28,41 @@ userName.addEventListener('input', function () {
 });
 
 // Campo CPF
-cpf.addEventListener('input', function () {
-    // Obter o valor atual do campo e remover caracteres não numéricos
-    var inputValue = cpf.value.replace(/\D/g, '');
+function formatarCPF(campoCPF) {
+    campoCPF.addEventListener('input', function () {
+        // Obter o valor atual do campo e remover caracteres não numéricos
+        var inputValue = campoCPF.value.replace(/\D/g, '');
 
-    // Limitar a quantidade de caracteres para 11
-    if (inputValue.length > 11) {
-        inputValue = inputValue.slice(0, 11);
-    }
+        // Limitar a quantidade de caracteres para 11
+        if (inputValue.length > 11) {
+            inputValue = inputValue.slice(0, 11);
+        }
 
-    // Formatando o CPF (XXX.XXX.XXX-XX)
-if (inputValue.length > 3) {
-    const groups = inputValue.match(/(\d{1,3})/g).filter(Boolean);
-    inputValue = groups.join('.');
+        // Formatando o CPF (XXX.XXX.XXX-XX)
+        if (inputValue.length > 3) {
+            const groups = inputValue.match(/(\d{1,3})/g).filter(Boolean);
+            inputValue = groups.join('.');
   
-    if (groups.length > 2) {
-        const lastGroup = groups.pop();
-        inputValue = groups.join('.') + '-' + lastGroup;
-    }
+            if (groups.length > 2) {
+                const lastGroup = groups.pop();
+                inputValue = groups.join('.') + '-' + lastGroup;
+            }
+        }
+
+        // Atualizar o valor no campo
+        campoCPF.value = inputValue;
+    });
 }
-    // Atualizar o valor no campo
-    cpf.value = inputValue;
-});
+
+// Aplicar formatação para o campo 'cpf'
+formatarCPF(cpf);
+
+
+
+
+
+
+
 
 
 // Campo Confirmar Senha
