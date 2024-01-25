@@ -12,7 +12,7 @@
     <div class="md:h-svh">
  
         <!--TELA LOGIN-->
-        <div id="loginScreen" class="bg-white m-auto bg-opacity-55 md:flex md:justify-center md:h-svh md:w-screen lg:w-screen">
+        <div id="loginScreen" class="bg-white m-auto bg-opacity-55 md:flex md:justify-center md:h-screen md:w-screen lg:w-screen">
             
             <!--IMAGEM-->
             <section id="formHead" class="text-center font-serif bg-green-800 shadow-lg p-10 md:flex md:w-full md:p-4 lg:w-full">
@@ -23,7 +23,7 @@
        
         
             <!--FORMULÁRIO LOGIN-->
-            <div class="container m-auto flex flex-col items-center text-center font-serif">
+            <div class="container m-auto md:m-0 flex flex-col items-center text-center font-serif">
 
                 <section id="formBody" class="w-80 mt-8 md:w-full md:h-screen md:flex md:justify-center md:items-center lg:w-full">
                     <form id="loginForm" action="" class="mt-6 flex flex-col text-left md:px-10 md:w-full lg:mx-8" autocomplete="off">
@@ -49,12 +49,14 @@
             
                         <button id="loginButton" type="submit" class="bg-green-800 w-24 mt-10 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">Login</button>
                     </form>
+
                 </section>
-            
                 <div class="py-2 mt-6 md:mt-0 md:mb-16">
                     <p>Não é cadastrado? <a href="./public/view/singUp.html" class="text-green-800">Solicitar cadastro</a></p>
                 </div>
             </div>
+            
+                
             
 
     <script src="./public/assets/js/userInteraction.js"></script>
