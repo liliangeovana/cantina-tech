@@ -23,48 +23,39 @@
        
         
             <!--FORMULÁRIO LOGIN-->
-            <section id="formBody" class=" text-center font-serif mt-8 md:w-full md:justify-center lg:w-full">
-                
+            <div class="container m-auto flex flex-col items-center text-center font-serif">
+
+                <section id="formBody" class="w-80 mt-8 md:w-full md:h-screen md:flex md:justify-center md:items-center lg:w-full">
+                    <form id="loginForm" action="" class="mt-6 flex flex-col text-left md:px-10 md:w-full lg:mx-8" autocomplete="off">
             
-                <form id="loginForm" action="" class="mt-6 px-8 flex flex-col text-left md:mt-28 lg:mt-24 lg:mx-14" autocomplete="off">
-
-                    <div id="returnOption" class="hidden py-2 text-right">Usar outra forma de login? 
-                        <span id="returnLink" class="cursor-pointer text-red-700">Retornar</span>
-                    </div>
-
-                    <div id="userLogin" class="flex flex-col">
-                        <label id="userLabel" for="cpf">CPF</label>
-                        <input 
-                            class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                        type="text" name="cpf" id="cpf">
-                    </div>
-
-                    <div id="emailLogin" class="flex flex-col">
-                        <label id="emailLabel" for="userEmail">Email</label>
-                        <input 
-                            class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900"
-                        type="email" name="userEmail" id="userEmail">
-                    </div>
-
-                    <div id="passwordLogin" class="flex flex-col">
-                        <label id="passwordLabel" for="userPassword">Senha</label>
-                        <input 
-                            class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" 
-                        type="password" name="userPassword" id="userPassword">
-                    </div>
-
-                    <button id="loginButton" type="submit" 
-                        class="bg-green-800 w-24 mt-10 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">
-                    Login</button>
-                
-                </form>
-
-                <div class="py-2 mt-6">
+                        <div id="returnOption" class="hidden py-2 text-right">Usar outra forma de login? 
+                            <span id="returnLink" class="cursor-pointer text-red-700">Retornar</span>
+                        </div>
+            
+                        <div id="userLogin" class="flex flex-col">
+                            <label id="userLabel" for="cpf">CPF</label>
+                            <input class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="text" name="cpf" id="cpf">
+                        </div>
+            
+                        <div id="emailLogin" class="flex flex-col">
+                            <label id="emailLabel" for="userEmail">Email</label>
+                            <input class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="email" name="userEmail" id="userEmail">
+                        </div>
+            
+                        <div id="passwordLogin" class="flex flex-col">
+                            <label id="passwordLabel" for="userPassword">Senha</label>
+                            <input class="bg-gray-200 focus:bg-gray-100 border border-gray-400 rounded-sm p-1 mb-3 focus:outline-none focus:border-blue-900" type="password" name="userPassword" id="userPassword">
+                        </div>
+            
+                        <button id="loginButton" type="submit" class="bg-green-800 w-24 mt-10 mx-auto p-2 text-white font-medium rounded-lg hover:bg-green-700">Login</button>
+                    </form>
+                </section>
+            
+                <div class="py-2 mt-6 md:mt-0 md:mb-16">
                     <p>Não é cadastrado? <a href="./public/view/singUp.html" class="text-green-800">Solicitar cadastro</a></p>
                 </div>
-            </section>
-        </div>
-    </div>
+            </div>
+            
 
     <script src="./public/assets/js/userInteraction.js"></script>
     <script src="./public/assets/js/validation.js"></script>
