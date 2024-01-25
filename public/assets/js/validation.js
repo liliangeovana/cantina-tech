@@ -3,11 +3,11 @@ var cpfLogin = document.getElementById('cpf');
 var userLoginCpf = document.getElementById('userLogin')
 
 //CAMPOS CADASTRO
-var userName = document.getElementById('singUpName')
-var cpf = document.getElementById('singUpCpf');
-var email = document.getElementById('signUpEmail');
-var password = document.getElementById('singUpPassword');
-var confirmPassword = document.getElementById('confirmPassword');
+var userName = document.getElementById('registerSolicitationName')
+var cpf = document.getElementById('registerSolicitationCPF');
+var email = document.getElementById('registerSolicitationEmail');
+var password = document.getElementById('registerSolicitationPassword');
+var confirmPassword = document.getElementById('registerSolicitationConfirmPassword');
 var Error = document.getElementById('Error');
 
 

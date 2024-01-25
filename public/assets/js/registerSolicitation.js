@@ -1,8 +1,8 @@
-var signUpForm = document.getElementById('singUpForm');
-var nameInput = document.getElementById('singUpName');
-var cpfInput = document.getElementById('singUpCpf');
-var emailInput = document.getElementById('signUpEmail');
-var passwordInput = document.getElementById('singUpPassword');
+var signUpForm = document.getElementById('registerSolicitationForm');
+var nameInput = document.getElementById('registerSolicitationName');
+var cpfInput = document.getElementById('registerSolicitationCPF');
+var emailInput = document.getElementById('registerSolicitationEmail');
+var passwordInput = document.getElementById('registerSolicitationPassword');
 
 
 document.getElementById('registerButton').addEventListener('click', function(e) {
