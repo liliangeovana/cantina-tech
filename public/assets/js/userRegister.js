@@ -11,7 +11,7 @@ document.getElementById('registerButton').addEventListener('click', function(e) 
     e.preventDefault();
 
     // valores dos campos de entrada
-    var name = userRegisterNameInput;
+    var name = userRegisterNameInput.value;
     var cpf = userRegisterCpfInput.value;
     var email = userRegisterEmailInput.value;
     var number = userRegisterNumberInput.value;

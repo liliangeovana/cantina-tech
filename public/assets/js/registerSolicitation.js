@@ -2,7 +2,6 @@ var signUpForm = document.getElementById('registerSolicitationForm');
 var nameInput = document.getElementById('registerSolicitationName');
 var cpfInput = document.getElementById('registerSolicitationCPF');
 var emailInput = document.getElementById('registerSolicitationEmail');
-var numberInput = document.getElementById('registerSolicitationNumber');
 var schoolSelect = document.getElementById('registerSolicitationSchool');
 
 
@@ -11,11 +10,10 @@ function sendEmail(userData) {
     var name = userData.name;
     var cpf = userData.cpf;
     var email = userData.email;
-    var number = userData.number;
     var school = userData.school;
 
     // Construir o corpo da mensagem de email com os detalhes do usuário
-    const bodyMessage = `Nome: ${name} <br> CPF: ${cpf} <br> Email: ${email} <br> Número: ${number} <br> Escola: ${school}`;
+    const bodyMessage = `Nome: ${name} <br> CPF: ${cpf} <br> Email: ${email} <br> Escola: ${school}`;
 
     // Enviar email com os detalhes do usuário
     Email.send({
@@ -46,11 +44,10 @@ signUpForm.addEventListener("submit", function (e) {
     var name = nameInput.value;
     var cpf = cpfInput.value;
     var email = emailInput.value;
-    var number = numberInput.value;
     var school = schoolSelect.value;
 
     // Verificar se todos os campos obrigatórios estão preenchidos
-    if (!name || !cpf || !email || !number) {
+    if (!name || !cpf || !email ) {
         Swal.fire({
             icon: "error",
             title: "Opa!",
@@ -64,7 +61,6 @@ signUpForm.addEventListener("submit", function (e) {
         name: name,
         cpf: cpf,
         email: email,
-        number: number,
         school: school
     };
 
@@ -75,5 +71,4 @@ signUpForm.addEventListener("submit", function (e) {
     nameInput.value = "";
     cpfInput.value = "";
     emailInput.value = "";
-    numberInput.value = "";
 });

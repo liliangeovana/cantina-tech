@@ -10,6 +10,7 @@ var email = document.getElementById('registerSolicitationEmail');
 
 
 
+
 //Campo nome
 userName.addEventListener('input', function () {
     var inputValue = userName.value;
