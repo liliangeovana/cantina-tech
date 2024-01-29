@@ -2,7 +2,6 @@ var userRegisterForm = document.getElementById('userRegisterForm');
 var userRegisterNameInput = document.getElementById('userRegisterName');
 var userRegisterCpfInput = document.getElementById('userRegisterCPF');
 var userRegisterEmailInput = document.getElementById('userRegisterEmail');
-var userRegisterNumberInput = document.getElementById('userRegisterNumber');
 var userRegisterSchool = document.getElementById('userRegisterSchool');
 var userRegisterpasswordInput = document.getElementById('userRegisterPassword');
 
@@ -14,7 +13,6 @@ document.getElementById('registerButton').addEventListener('click', function(e) 
     var name = userRegisterNameInput.value;
     var cpf = userRegisterCpfInput.value;
     var email = userRegisterEmailInput.value;
-    var number = userRegisterNumberInput.value;
     var school = userRegisterSchool.value;
     var password = userRegisterpasswordInput.value;
 
@@ -22,7 +20,7 @@ document.getElementById('registerButton').addEventListener('click', function(e) 
     var users = JSON.parse(localStorage.getItem('users')) || [];
     
     // Adicionar o novo usuário ao array
-    if(!name || !cpf || !email || !number || !password){
+    if(!name || !cpf || !email || !password){
         Swal.fire({
             icon: "error",
             title: "Opa!",
@@ -34,7 +32,6 @@ document.getElementById('registerButton').addEventListener('click', function(e) 
             name: name,
             cpf: cpf,
             email: email,
-            number: number,
             school: school,
             password: password
         });

@@ -8,9 +8,6 @@ var cpf = document.getElementById('registerSolicitationCPF');
 var email = document.getElementById('registerSolicitationEmail');
 
 
-
-
-
 //Campo nome
 userName.addEventListener('input', function () {
     var inputValue = userName.value;
